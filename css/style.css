@@ -172,5 +172,41 @@ nav {
     font-size: 19px;
 }
 
+/* footer */
+
+footer {
+    padding: 48px 16px;
+    text-align: center;
+    border-top: 3px dashed var(--border-color);
+    margin-top: 64px;
+}
+
+.heart {
+    color: var(--accent);
+    font-size: 24px;
+}
+
+.socials {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.social-icon img {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.social-icon:hover img {
+    transform: scale(1.15) rotate(6deg);
+    filter: grayscale(0%);
+}
+
+
 
 
