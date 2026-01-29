@@ -60,3 +60,33 @@ cards.forEach(card => {
         card.style.transform = "perspective(1000px) rotateX(0) rotateY(0)";
     });
 });
+
+
+// theme
+
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+const icon = themeToggle.querySelector(".icon");
+
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme) {
+    body.setAttribute("data-theme", currentTheme);
+    if (currentTheme === "light") {
+        icon.textContent = "🌙";
+    }
+}
+
+themeToggle.addEventListener("click", () => {
+    const isLight = body.getAttribute("data-theme") === "light";
+    
+    if (isLight) {
+        body.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+        icon.textContent = "☀️";
+    } else {
+        body.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+        icon.textContent = "🌙";
+    }
+});
