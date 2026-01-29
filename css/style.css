@@ -162,9 +162,8 @@ nav {
 .card h3 {
     margin-bottom: 8px;
     font-size: 32px;
-    text-decoration: underline;
+    text-decoration: underline wavy;
     text-decoration-thickness: 3px;
-    text-decoration-style: wavy;
     text-decoration-color: var(--accent);
 }
 
