@@ -23,16 +23,19 @@
         </nav>
     </header>
 
-    <section>
-        <div>
-            <h2>Contact Me</h2>
-            <form id="contactForm">
-                <input type="text" id="name" placeholder="Name">
-                <input type="email" id="email" placeholder="Email">
-                <textarea id="message" placeholder="Message" rows="5"></textarea>
-                <button>Send
+    <section class="contact ele" style="min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+        <div class="card" style="width: 100%; max-width: 500px;">
+            <h2 style="text-align: center; margin-bottom: 1.5rem; font-size: 3rem;">Contact Me</h2>
+            <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <input type="text" id="name" placeholder="Name"
+                    style="background: transparent; border: 2px solid var(--border-color); color: var(--text); padding: 1rem; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; font-family: var(--font-main); font-size: 1.2rem;">
+                <input type="email" id="email" placeholder="Email"
+                    style="background: transparent; border: 2px solid var(--border-color); color: var(--text); padding: 1rem; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; font-family: var(--font-main); font-size: 1.2rem;">
+                <textarea id="message" placeholder="Message" rows="5"
+                    style="background: transparent; border: 2px solid var(--border-color); color: var(--text); padding: 1rem; border-radius: 15px; resize: none; font-family: var(--font-main); font-size: 1.2rem;"></textarea>
+                <button type="submit" class="btn primary-btn" style="width: 100%;">Send
                     Message</button>
-
+                <p id="error" style="color: var(--accent); text-align: center; margin-top: 0.5rem;"></p>
             </form>
         </div>
     </section>
