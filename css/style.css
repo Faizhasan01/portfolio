@@ -206,6 +206,58 @@ footer {
     filter: grayscale(0%);
 }
 
+/* proj-card */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    padding: 0 10%;
+    align-items: start;
+}
+
+.project-card {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+
+.project-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.project-card:hover .overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.project-card h3 {
+    color: rgb(244, 209, 209);
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+    text-shadow: 3px 3px 0 rgba(48, 31, 31, 0.6);
+}
+
+
+
+
+
+
 
 
 
