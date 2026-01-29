@@ -5,55 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Faiz</span></h1>
+    <header class="navbar ele">
+        <h1 class="logo">Faiz<span class="dot">.</span></h1>
         <nav>
-            <a href>Home</a>
-            <a href>About</a>
-            <a href>Projects</a>
-            <a href>Contact</a>
-            <button id=>
-                <span="icon">🌙</span=>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <button id="themeToggle" class="theme-btn">
+                <span class="icon">🌙</span>
             </button>
         </nav>
     </header>
 
-    <section>
-        <div>
-            <h2>Hello, I'm Faiz Hasan</h2>
+    
+
+    <section class="intro ele">
+        <div class="intro-content">
+            <h2>Hello, I'm <span class="gradient-text">Faiz Hasan</span></h2>
+            <p>I am a <span class="typewriter"></span></p>
+            <div class="nav-btn">
+                <a class="btn primary-btn" href="projects.html">View Projects</a>
+                <a class="btn secondary-btn" href="contact.html">Contact Me</a>
+            </div>
         </div>
     </section>
 
-    <section>
-        <div>
-            <div>💻</div>
+    <section class="cards ele">
+        <div class="card tilt-card">
+            <div class="card-icon">💻</div>
             <h3>HTML Expert</h3>
             <p>Crafting semantic and accessible structure.</p>
         </div>
-        <div>
-            <div>🎨</div>
+        <div class="card tilt-card">
+            <div class="card-icon">🎨</div>
             <h3>CSS Designer</h3>
             <p>Creating beautiful and responsive layouts.</p>
         </div>
-        <div>
-            <div>⚡</div=>
-                <h3>JS Developer</h3>
-                <p>Adding interactivity and dynamic logic.</p>
+        <div class="card tilt-card">
+            <div class="card-icon">⚡</div>
+            <h3>JS Developer</h3>
+            <p>Adding interactivity and dynamic logic.</p>
         </div>
     </section>
 
     <footer>
         <p>© 2026 Faiz Hasan.<span clas>♥</span></p>
-        <div="socials">
+        <div class="socials">
             <a href="#">🌐</a>
             <a href="#">📸</a>
             <a href="#">💼</a>
-        </div=>
+        </div>
     </footer>
 
 </body>

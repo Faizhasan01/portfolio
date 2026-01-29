@@ -1,0 +1,136 @@
+:root {
+    --bg: #fdfbf7;
+   
+    --text: #2c2c2c;
+   
+    --primary: #2c2c2c;
+    --accent: #ff4757;
+    
+    --card-bg: #ffffff;
+    --border-color: #2c2c2c;
+    --shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+   
+    --font-main: 'Patrick Hand', cursive;
+   
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+    /* paper */
+    background-image: radial-gradient(#d7d7d7 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+::selection {
+    background: var(--accent);
+    color: white;
+}
+
+
+/* cursor */
+body {
+    cursor: auto;
+}
+
+
+a,
+button,
+.card,
+input,
+textarea,
+.theme-btn {
+    cursor: pointer;
+}
+
+/* navbar */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: var(--bg);
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 1.3rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+    text-decoration: line-through;
+}
+
+/* intro */
+
+.intro {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.intro h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.nav-btn {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* modify */
+
+.gradient-text {
+    color: var(--accent);
+    text-decoration: underline wavy;
+}
+
+
+
