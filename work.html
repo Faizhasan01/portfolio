@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Projects</title>
+    <title>Portfolio | work</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 </head>
@@ -15,7 +15,7 @@
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="about.html" class="nav-link">About</a>
-            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="work.html" class="nav-link">Work</a>
             <a href="contact.html" class="nav-link">Contact</a>
             <button id="themeToggle" class="theme-btn">
                 <span class="icon">🌙</span>
@@ -23,9 +23,9 @@
         </nav>
     </header>
 
-    
+
     <section class="gallery ele">
-        <h2 style="text-align: center; margin-bottom: 2rem; font-size: 3rem;">My Work</h2>
+        <h2 style="text-align: center; margin-bottom: 2rem; font-size: 3rem;">My Projects</h2>
 
         <div class="project-grid">
 
@@ -38,7 +38,7 @@
             </a>
 
             <a href="https://coral-goldy-64.tiiny.site" target="_blank" class="project-link">
-                <div class="project-card tilt-card"" style="background-image: url('img/proj/Proposal.jpg');">
+                <div class="project-card tilt-card"" style=" background-image: url('img/proj/Proposal.jpg');">
                     <div class="overlay">
                         <h3>Fun Proposal Site</h3>
                     </div>
@@ -46,7 +46,7 @@
             </a>
 
             <a href="https://faizhasan01.github.io/project_CSE316" target="_blank" class="project-link">
-                <div class="project-card tilt-card"" style="background-image: url('img/proj/Disk.jpg');">
+                <div class="project-card tilt-card"" style=" background-image: url('img/proj/Disk.jpg');">
                     <div class="overlay">
                         <h3>Disk Scheduling Simulator</h3>
                     </div>
@@ -54,25 +54,40 @@
             </a>
 
             <a href="https://inkify-frontend.vercel.app" target="_blank" class="project-link">
-                <div class="project-card tilt-card"" style="background-image: url('img/proj/inkify.jpg'); ">
-                    <div class="overlay">
-                        <h3>Inkify</h3>
-                    </div>
+                <div class="project-card tilt-card"" style=" background-image: url('img/proj/inkify.jpg'); ">
+                    <div class=" overlay">
+                    <h3>Inkify</h3>
                 </div>
-            </a>
+        </div>
+        </a>
 
-            <a href="#" target="_blank" class="project-link pos-midlle">
-                <div class="project-card tilt-card"" style="background-image: url(''); ">
-                    <div class="overlay">
-                        <h3>Upcoming..</h3>
-                    </div>
-                </div>
-            </a>
+        <a href="#" target="_blank" class="project-link pos-midlle">
+            <div class="project-card tilt-card"" style=" background-image: url(''); ">
+                    <div class=" overlay">
+                <h3>Upcoming..</h3>
+            </div>
+            </div>
+        </a>
 
         </div>
 
     </section>
 
+    <section class="certificates ele" style="padding: 3rem 10%; text-align: center;">
+        <h2 style="font-size: 3rem; margin-bottom: 2rem;">My <span class="gradient-text">Certificates</span></h2>
+
+        <div class="project-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+            
+            <img src="img/proj/certi/certi1.png" alt="Certificate 1" class="preview-img">
+            <img src="img/proj/certi/certi2.png" alt="Certificate 2" class="preview-img">
+            <img src="img/proj/certi/certi3.png" alt="Certificate 3" class="preview-img">
+        </div>
+    </section>
+
+    
+    <div id="imageModal" class="modal">
+        <img class="modal-content" id="modalImage">
+    </div>
 
     <footer class="ele">
         <p>© 2026 Faiz Hasan.<span class="heart">♥</span></p>

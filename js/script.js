@@ -90,3 +90,30 @@ themeToggle.addEventListener("click", () => {
         icon.textContent = "🌙";
     }
 });
+
+// modal logic
+const modal = document.getElementById("imageModal");
+if (modal) {
+    const modalImg = document.getElementById("modalImage");
+    const previews = document.querySelectorAll(".preview-img");
+
+    previews.forEach(preview => {
+        preview.addEventListener("click", () => {
+            modal.classList.add("active");
+            modalImg.src = preview.src;
+        });
+    });
+
+    modal.addEventListener("click", (e) => {
+        // Close modal if clicked outside the image itself
+        if (e.target !== modalImg) {
+            modal.classList.remove("active");
+            // Clear source after animation to prevent flashing next time
+            setTimeout(() => {
+                if (!modal.classList.contains("active")) {
+                    modalImg.src = "";
+                }
+            }, 300);
+        }
+    });
+}

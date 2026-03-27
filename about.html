@@ -16,7 +16,7 @@
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="about.html" class="nav-link">About</a>
-            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="work.html" class="nav-link">Work</a>
             <a href="contact.html" class="nav-link">Contact</a>
             <button id="themeToggle" class="theme-btn">
                 <span class="icon">🌙</span>
@@ -29,8 +29,8 @@
         <div class="card" style="max-width: 800px; margin: auto;">
             <p style="font-size: 24px; line-height: 1.6; color: var(--text);">
                 I’m a B.Tech student with a strong interest in Full-Stack Web Development.
-                I enjoy turning ideas into real, usable web applications and continuously
-                improving my skills by building practical, real-world projects.
+                I enjoy turning ideas into real-usable web applications and continuously
+                improving my skills by building practical and real-world projects.
             </p>
             <p>
                 I focus on writing clean code, creating responsive designs, and learning
@@ -39,29 +39,128 @@
         </div>
     </section>
 
-    <section class="skills ele" style="padding: 3rem 10%;">
-        <h2 style="text-align: center; margin-bottom: 2rem; font-size: 3rem;">My Skills</h2>
-        <div class="cards" style="padding: 0; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
-            <div class="card tilt-card" style="padding: 1.5rem;">
-                <h3 style="margin: 0; font-size: 1.8rem;">HTML</h3>
+    <section class="skills ele" style="padding: 4rem 10%;">
+        <h2 style="text-align: center; margin-bottom: 5rem; font-size: 3rem;">My <span class="gradient-text">Skill Tree</span></h2>
+        
+        <div class="skill-tree-container">
+            <!-- Languages Category -->
+            <div class="skill-branch-group">
+                <div class="category-node">Languages</div>
+                <div class="skills-cluster">
+                    <div class="skill-node">C++</div>
+                    <div class="skill-node">Java</div>
+                    <div class="skill-node">C</div>
+                </div>
             </div>
-            <div class="card tilt-card" style="padding: 1.5rem;">
-                <h3 style="margin: 0; font-size: 1.8rem;">CSS</h3>
+
+            <!-- Frontend Category -->
+            <div class="skill-branch-group">
+                <div class="category-node">Frontend</div>
+                <div class="skills-cluster">
+                    <div class="skill-node highlight">HTML</div>
+                    <div class="skill-node">CSS</div>
+                    <div class="skill-node">Bootstrap</div>
+                    <div class="skill-node highlight">React</div>
+                </div>
             </div>
-            <div class="card tilt-card" style="padding: 1.5rem;">
-                <h3 style="margin: 0; font-size: 1.8rem;">JavaScript</h3>
+
+            <!-- Backend Category -->
+            <div class="skill-branch-group">
+                <div class="category-node">Backend</div>
+                <div class="skills-cluster">
+                    <div class="skill-node highlight">Node.js</div>
+                </div>
             </div>
-            <div class="card tilt-card" style="padding: 1.5rem;">
-                <h3 style="margin: 0; font-size: 1.8rem;">Java</h3>
+
+            <!-- Database Category -->
+            <div class="skill-branch-group">
+                <div class="category-node">Database</div>
+                <div class="skills-cluster">
+                    <div class="skill-node">MongoDB</div>
+                    <div class="skill-node">MySQL</div>
+                </div>
             </div>
-            <div class="card tilt-card" style="padding: 1.5rem;">
-                <h3 style="margin: 0; font-size: 1.8rem;">React</h3>
+
+            <!-- Tools/Platforms Category -->
+            <div class="skill-branch-group">
+                <div class="category-node">Tools</div>
+                <div class="skills-cluster">
+                    <div class="skill-node">GitHub</div>
+                    <div class="skill-node highlight">VS Code</div>
+                    <div class="skill-node">Vercel</div>
+                </div>
             </div>
-            <div class="card tilt-card" style="padding: 1.5rem;">
-                <h3 style="margin: 0; font-size: 1.8rem;">Node.js</h3>
+
+            <!-- Soft Skills Category -->
+            <div class="skill-branch-group">
+                <div class="category-node">Soft Skills</div>
+                <div class="skills-cluster">
+                    <div class="skill-node">Problem Solving</div>
+                    <div class="skill-node">Decision Making</div>
+                    <div class="skill-node">Teamwork</div>
+                    <div class="skill-node">Adaptability</div>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="resume ele" style="padding: 3rem 10%; text-align: center;">
+        <h2 style="font-size: 3rem; margin-bottom: 3rem;">My <span class="gradient-text">Resume</span></h2>
+        
+        <div class="resume-container">
+            <!-- Education Focus -->
+            <div class="resume-category">
+                <h3>Education</h3>
+                <div class="resume-grid">
+                    <div class="card tilt-card resume-card">
+                        <div class="resume-card-header">
+                            <span class="resume-card-title">Bachelor of Technology</span>
+                            <span class="resume-card-date">Aug '23 – Present</span>
+                        </div>
+                        <div class="resume-card-subtitle">Lovely Professional University, Phagwara, Punjab</div>
+                        <ul>
+                            <li>Computer Science and Engineering</li>
+                            <li>CGPA: 7.56</li>
+                        </ul>
+                    </div>
+
+                    <div class="card tilt-card resume-card">
+                        <div class="resume-card-header">
+                            <span class="resume-card-title">Intermediate (PCM)</span>
+                            <span class="resume-card-date">May '21 – July '22</span>
+                        </div>
+                        <div class="resume-card-subtitle">Paramount Academy, Muzaffarpur, Bihar</div>
+                        <ul>
+                            <li>Percentage: 71.4%</li>
+                        </ul>
+                    </div>
+
+                    <div class="card tilt-card resume-card">
+                        <div class="resume-card-header">
+                            <span class="resume-card-title">Matriculation</span>
+                            <span class="resume-card-date">May '19 – July '20</span>
+                        </div>
+                        <div class="resume-card-subtitle">Doon Sr Sec School, Muzaffarpur, Bihar</div>
+                        <ul>
+                            <li>Percentage: 83.2%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Resume Actions -->
+        <div style="display: flex; gap: 24px; justify-content: center; margin-top: 48px; flex-wrap: wrap;">
+            <button class="btn primary-btn" onclick="document.getElementById('imageModal').classList.add('active'); document.getElementById('modalImage').src='img/resume.png';">View Resume</button>
+            <a href="https://drive.google.com/file/d/1OWPjb07oMKhddmmO0LNYDUjoG9IDmxna/view?usp=sharing" target="_blank" class="btn secondary-btn">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Modal for images -->
+    <div id="imageModal" class="modal">
+        <img class="modal-content" id="modalImage">
+    </div>
 
     <footer class="ele">
         <p>© 2026 Faiz Hasan.<span class="heart">♥</span></p>

@@ -314,17 +314,310 @@ footer {
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
 }
 
+/* modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.preview-img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid var(--border-color);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 0 auto;
+}
+
+.preview-img:hover {
+    transform: scale(1.02);
+}
+
+/* resume */
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.resume-category h3 {
+    font-size: 36px;
+    color: var(--text);
+    margin-bottom: 24px;
+    text-decoration: underline wavy;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--accent);
+    display: inline-block;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.resume-grid.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.resume-card {
+    background: var(--card-bg);
+    padding: 32px;
+    border: 3px solid var(--border-color);
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.resume-card:hover {
+    transform: rotate(-1deg) scale(1.02);
+}
+
+.resume-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.resume-card-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.2;
+}
+
+.resume-card-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.resume-card-date {
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--text);
+    color: var(--bg);
+    padding: 6px 14px;
+    border-radius: 24px;
+    white-space: nowrap;
+}
+
+.resume-card ul {
+    list-style-type: none;
+    margin-top: 16px;
+}
+
+.resume-card ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 28px;
+    color: var(--text);
+}
+
+.resume-card ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.resume-card-links {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.resume-card-links .btn {
+    padding: 0.4rem 1.2rem;
+    font-size: 1.1rem;
+}
+
+/* skill tree graph */
+.skill-tree-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 0;
+}
+
+.skill-branch-group {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.category-node {
+    background: var(--text);
+    color: var(--bg);
+    padding: 12px 24px;
+    border-radius: 20px 5px 20px 5px;
+    font-size: 24px;
+    font-weight: 700;
+    min-width: 180px;
+    text-align: center;
+    position: relative;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    transition: transform 0.3s;
+}
+
+.category-node:hover {
+    transform: scale(1.05);
+}
+
+.category-node::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    z-index: 1;
+    transition: width 0.3s, background 0.3s;
+}
+
+.skill-branch-group:hover .category-node::after {
+    background: #ff7680;
+}
+
+.skills-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent);
+    flex: 1;
+    transition: border-color 0.3s;
+}
+
+.skill-branch-group:hover .skills-cluster {
+    border-color: #ff7680;
+}
+
+.skill-node {
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    cursor: default;
+}
+
+.skill-node::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 3px;
+    background: var(--accent);
+    transition: background 0.3s;
+}
+
+.skill-branch-group:hover .skill-node::before {
+    background: #ff7680;
+}
+
+.skill-node:hover {
+    transform: translateY(-4px) scale(1.05);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(255, 77, 90, 0.4);
+    z-index: 10;
+}
+
+.skill-node.highlight {
+    border-color: var(--accent);
+    color: var(--accent);
+    border-width: 3px;
+    box-shadow: 0 0 10px rgba(255, 77, 90, 0.2);
+}
+
 /* resposive */
 
 @media (max-width: 768px) {
     .intro h2 {
         font-size: 3rem;
     }
+    
+    .skill-branch-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .category-node::after {
+        right: auto;
+        left: 40px;
+        top: 100%;
+        width: 3px;
+        height: 20px;
+        transform: none;
+    }
+    
+    .skills-cluster {
+        margin-left: 40px;
+        padding-left: 20px;
+    }
 }
-
-
-
-
-
-
-
