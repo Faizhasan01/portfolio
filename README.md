@@ -29,7 +29,6 @@ The design follows a clean, hand-drawn, and creative style while keeping the lay
 
 ## 📁 Project Sample Images:
 <img width="1900" height="987" alt="image" src="https://github.com/user-attachments/assets/b5b073ba-f065-4e75-b633-746d20922942" />
-<img width="1902" height="980" alt="image" src="https://github.com/user-attachments/assets/fce335ff-93d4-4e2d-9c54-d1ee155a9dc2" />
 <img width="1897" height="953" alt="image" src="https://github.com/user-attachments/assets/7c26338a-68a1-40a3-9853-023bf666a264" />
 <img width="1890" height="978" alt="image" src="https://github.com/user-attachments/assets/4f8d2497-68d1-4cbe-b85d-f506610ded43" />
 
